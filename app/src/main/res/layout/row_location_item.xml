@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.chauthai.swipereveallayout.SwipeRevealLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_50sdp"
+    android:background="@color/colorSecondary"
+    app:dragEdge="right"
+    app:mode="same_level">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/location_edit"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="match_parent"
+            android:background="#2196F3"
+            android:gravity="center"
+            android:text="Edit"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/location_delete"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="match_parent"
+            android:background="#F44336"
+            android:gravity="center"
+            android:text="Delete"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/location_image"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/ic_baseline_name_24"
+            app:civ_border_color="@color/colorTextPrimary"
+            app:civ_border_width="@dimen/_1sdp" />
+
+
+        <TextView
+            android:id="@+id/hiker_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_toStartOf="@+id/location_pin"
+            android:layout_toEndOf="@+id/location_image"
+            android:text="Hiker Name:"
+            android:textColor="@color/purple_200"
+            android:textSize="@dimen/_10sdp" />
+
+        <TextView
+            android:id="@+id/hiker_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/hiker_label"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_toStartOf="@+id/location_pin"
+            android:layout_toEndOf="@+id/location_image"
+            android:text="hiker name"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="@dimen/_16sdp" />
+
+        <TextView
+            android:id="@+id/location_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_below="@id/hiker_name"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_toStartOf="@+id/location_pin"
+            android:layout_toEndOf="@+id/location_image"
+            android:text="Location:"
+            android:textColor="@color/purple_200"
+            android:textSize="@dimen/_10sdp" />
+
+        <TextView
+            android:id="@+id/location_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/location_label"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_toStartOf="@+id/location_pin"
+            android:layout_toEndOf="@+id/location_image"
+            android:text="location name"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="@dimen/_16sdp" />
+
+
+        <ImageView
+            android:id="@+id/location_pin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:src="@drawable/ic_baseline_location_24"
+            app:tint="@color/colorTextPrimary" />
+
+
+    </RelativeLayout>
+
+
+</com.chauthai.swipereveallayout.SwipeRevealLayout>

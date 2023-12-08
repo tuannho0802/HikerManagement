@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorSecondary"
+    tools:context=".AddEditLocation">
+
+    <!--    fab button for add data to database-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp"
+        tools:ignore="ExtraText">
+
+        <!--        circle image for profile image-->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/locationIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_baseline_location_24"
+            app:civ_border_color="@color/colorTextPrimary"
+            app:civ_border_width="@dimen/_1sdp" />
+
+        <!--        editText for name input&ndash;&gt;-->
+        <EditText
+            android:id="@+id/nameEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/background_input_field"
+            android:drawableStart="@drawable/ic_baseline_name_24"
+            android:drawablePadding="@dimen/_5sdp"
+            android:hint="Name of Hike"
+            android:inputType="textPersonName"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/colorTextSecondary"
+            android:textColorHint="@color/white"
+            android:textSize="@dimen/_14sdp" />
+
+        <!--        editText for location input&ndash;&gt;-->
+        <EditText
+            android:id="@+id/locationEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/background_input_field"
+            android:drawableStart="@drawable/ic_baseline_location_24"
+            android:drawablePadding="@dimen/_5sdp"
+            android:hint="Location"
+            android:inputType="textAutoCorrect"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/colorTextSecondary"
+            android:textColorHint="@color/white"
+            android:textSize="@dimen/_14sdp" />
+
+        <!--        editText for date input&ndash;&gt;-->
+        <EditText
+            android:id="@+id/dateEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/background_input_field"
+            android:drawableStart="@drawable/ic_baseline_date_24"
+            android:drawablePadding="@dimen/_5sdp"
+            android:hint="Date"
+            android:inputType="date"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/colorTextSecondary"
+            android:textColorHint="@color/white"
+            android:textSize="@dimen/_14sdp" />
+
+        <!--        checkBox for parking input&ndash;&gt;-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/_10sdp"
+            android:text="Parking Available:"
+            android:textColor="@color/colorTextSecondary"
+            android:textSize="@dimen/_14sdp" />
+
+        <Spinner
+            android:id="@+id/parkingCb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/background_input_field"
+            android:drawableStart="@drawable/ic_baseline_difficult_24"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/colorTextSecondary"
+            android:textSize="@dimen/_14sdp" />
+
+        <!--        editText for length input&ndash;&gt;-->
+        <EditText
+            android:id="@+id/lengthEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/background_input_field"
+            android:drawableStart="@drawable/ic_baseline_hike_length_24"
+            android:drawablePadding="@dimen/_5sdp"
+            android:hint="Hike Length (Km)"
+            android:inputType="number"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/colorTextSecondary"
+            android:textColorHint="@color/white"
+            android:textSize="@dimen/_14sdp" />
+
+        <!--        difficult for hike input&ndash;&gt;-->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/_10sdp"
+            android:text="Difficulty:"
+            android:textColor="@color/colorTextSecondary"
+            android:textSize="@dimen/_14sdp" />
+
+        <Spinner
+            android:id="@+id/difficultyCb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/background_input_field"
+            android:drawableStart="@drawable/ic_baseline_difficult_24"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/colorTextSecondary"
+            android:textSize="@dimen/_14sdp" />
+
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="129dp"
+        android:layout_height="105dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="39dp"
+        android:contentDescription="TODO"
+        android:elevation="@dimen/_5sdp"
+        android:src="@drawable/ic_baseline_add_24"
+        app:backgroundTint="@color/colorTextPrimary"
+        app:pressedTranslationZ="@dimen/_10sdp"
+        app:tint="@color/white" />
+</RelativeLayout>
